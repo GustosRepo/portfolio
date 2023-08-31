@@ -6,41 +6,48 @@ import Link from "next/link";
 import Image from "next/image";
 import { GithubIcon } from "@/components/icons";
 import beerfinderapp from "/public/images/projects/beerfinderapp.png";
+import { motion } from "framer-motion";
+
+const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, protitle, summary, img, link, github }) => {
   return (
-    <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl">
+    
+    <article className="relative flex items-center justify-center w-full p-12 border border-b-4 border-r-4 border-solid shadow-2xl rounded-3xl border-dark bg-light">
+
       <Link
         href={link}
         target="_blank"
-        className="w-1/2 cursor-pointer overflow-hidden rounded-lg "
+        className="flex items-center justify-center w-1/2 overflow-hidden rounded-lg cursor-pointer"
       >
-        <Image
+        <FramerImage
           src={img}
           alt={protitle}
-          className="w-1/3 h-1/3 items-center justify-between"
+          className="w-full h-auto "
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.2 }}
         />
       </Link>
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
-        <span className=" text-primary font-medium text-xl">{type}</span>
+      <div className="flex flex-col items-start justify-between w-1/2 pl-6">
+        <span className="text-xl font-medium text-primary">{type}</span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold ">
+          <h2 className="w-full my-2 text-4xl font-bold text-left ">
             {protitle}
           </h2>
         </Link>
         <p>{summary}</p>
-        <div className="mt-2 flex items-center">
+        <div className="flex items-center mt-2">
           <Link href={github} target="_blank" className="w-10">
             <GithubIcon />
           </Link>
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold"
+            className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light"
           >
             Visit Project
           </Link>
@@ -53,38 +60,41 @@ const FeaturedProject = ({ type, protitle, summary, img, link, github }) => {
 const Project = ({ type, protitle, summary, img, link, github }) => {
   return (
     <div>
-      <article className="w-full py-10 flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative">
+      <article className="relative flex flex-col items-center justify-center w-full p-6 py-10 border border-b-4 border-r-4 border-solid rounded-2xl border-dark bg-light">
+        
         <Link
           href={link}
           target="_blank"
-          className="w-1/2 cursor-pointer overflow-hidden rounded-lg "
+          className="w-1/2 overflow-hidden rounded-lg cursor-pointer "
         >
-          <Image
+          <FramerImage
             src={img}
             alt={protitle}
-            className="w-full h-auto items-center justify-between mt-4"
+            className="items-center justify-between w-full h-auto mt-4"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.2 }}
           />
         </Link>
-        <div className="w-1/2 flex flex-col items-start justify-between pl-6">
-          <span className=" text-primary font-medium text-xl">{type}</span>
+        <div className="flex flex-col items-start justify-between w-1/2 pl-6">
+          <span className="text-xl font-medium text-primary">{type}</span>
           <Link
             href={link}
             target="_blank"
             className="hover:underline underline-offset-2"
           >
-            <h2 className="my-2 w-full text-left text-3xl font-bold ">
+            <h2 className="w-full my-2 text-3xl font-bold text-left ">
               {protitle}
             </h2>
           </Link>
           <p>{summary}</p>
-          <div className="mt-2 flex items-center">
-            <Link href={github} target="_blank" className="w-10">
+          <div className="flex items-center justify-between w-full ">
+            <Link href={github} target="_blank" className="w-8">
               <GithubIcon />
             </Link>
             <Link
               href={link}
               target="_blank"
-              className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold"
+              className="p-1 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light"
             >
               Visit Project
             </Link>
@@ -103,7 +113,7 @@ const projects = () => {
         <title>AH || Project Page</title>
         <meta name="Portfolio" content="cv portfolio made with react/nextjs" />
       </Head>
-      <main className="w-full mb-16 px-4 flex flex-col item-container justify-center">
+      <main className="flex flex-col justify-center w-full px-4 mb-16 item-container ">
         <Layout className="pt-16">
           <AnimatedTexts
             text="“Technology is best when it brings people together”"
