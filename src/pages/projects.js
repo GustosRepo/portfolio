@@ -1,4 +1,3 @@
-import React from "react";
 import Head from "next/head";
 import AnimatedTexts from "@/components/AnimatedTexts";
 import Layout from "@/components/Layout";
@@ -94,7 +93,7 @@ const Project = ({ type, protitle, summary, img, link, github }) => {
             <Link
               href={link}
               target="_blank"
-              className="p-1 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light"
+              className="p-1 px-6 text-lg font-semibold rounded-lg bg-dark text-light"
             >
               Visit Project
             </Link>

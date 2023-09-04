@@ -106,7 +106,7 @@ const articles = () => {
               artTitle="Front-end, Back-end, and Databases Explained"
               summary="This article serves as your guide to comprehending the roles, technologies, and skills associated with front-end, back-end, and databases, helping you make an informed decision about your specialization path."
               time="15 minutes"
-              link="/"
+              link="/articleTwo"
               img={article2}
             />
           </ul>
@@ -115,13 +115,13 @@ const articles = () => {
             <Article
             title="HTML, CSS, JavaScript, and React for Beginners"
             date="15 minutes"
-            link=""
+            link="/articleThree"
             img={article3}            
             />
                         <Article
             title="Mastering the Web Trinity: Advanced Techniques in HTML, CSS, and JavaScript"
             date="15 minutes"
-            link=""
+            link="/articleFour"
             img={article4}            
             />
           </ul>
