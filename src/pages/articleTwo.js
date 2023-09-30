@@ -37,7 +37,7 @@ const articleTwo = () => {
             text="Front-end, Back-end, and Databases Explained"
             className="mb-16"
           />
-          <article>
+          <article className="dark:text-light/75">
             <h1 className="text-3xl font-bold">
               Navigating the World of Web Development Specializations
             </h1>
@@ -185,7 +185,7 @@ const articleTwo = () => {
           <CustomLink
             href="/articles"
             title="Back to Articles"
-            className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light"
+            className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light dark:border-solid dark:border-light dark:border-2"
           />
         </Layout>
       </main>

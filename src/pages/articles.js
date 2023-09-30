@@ -47,9 +47,9 @@ const MovingImg = ({title, img, link}) => {
 
 const Article = ({img, title , date , link}) => {
     return (
-    <li className="relative w-full p-4 py-6 my-4 rounded=xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4">
+    <li className="relative flex items-center justify-between w-full p-4 py-6 my-4 border border-b-4 border-r-4 border-solid rounded-xl bg-light text-dark first:mt-0 border-dark dark:bg-dark dark:text-light dark:border-light">
         <MovingImg img={img} title={title} link={link} />
-        <span className="pl-4 font-semibold text-primary">{date}</span>
+        <span className="pl-4 font-semibold text-primary dark:text-primaryDark">{date}</span>
     </li>
 
     
@@ -59,7 +59,7 @@ const Article = ({img, title , date , link}) => {
 
 const FeaturedArticle = ({ artTitle, summary, img, link, time }) => {
   return (
-    <li className="w-full col-span-1 p-8 border border-b-4 border-r-4 border-solid bg-light border-dark rounded-2xl">
+    <li className="w-full col-span-1 p-8 border border-b-4 border-r-4 border-solid bg-light border-dark rounded-2xl dark:bg-dark dark:border-light">
       <Link
         href={link}
         target="_blank"
@@ -76,7 +76,7 @@ const FeaturedArticle = ({ artTitle, summary, img, link, time }) => {
         </h2>
       </Link>
       <p className="mb-2 text-sm">{summary}</p>
-      <span className="font-semibold text-primary ">{time}</span>
+      <span className="font-semibold text-primary dark:text-primaryDark ">{time}</span>
     </li>
   );
 };
@@ -88,7 +88,7 @@ const articles = () => {
         <title>AH || Articles Page</title>
         <meta name="Portfolio" content="cv portfolio made with react/nextjs" />
       </Head>
-      <main className="flex flex-col items-center justify-center w-full mb-16 overflow-hidden">
+      <main className="flex flex-col items-center justify-center w-full mb-16 overflow-hidden dark:bg-dark dark:text-light">
         <Layout className="pt-16">
           <AnimatedTexts
             text="“Thanks to Tech, we can now learn anything anywhere.”"

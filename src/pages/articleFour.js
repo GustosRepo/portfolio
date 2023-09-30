@@ -34,7 +34,7 @@ const articleFour = () => {
       <main>
         <Layout>
           <AnimatedTexts text="Mastering the Web Trinity" className="mb-16" />
-          <article>
+          <article className="dark:text-light/75">
             <h1 className="text-3xl font-bold">
               Advanced Techniques in HTML, CSS, and JavaScript
             </h1>
@@ -183,7 +183,7 @@ const articleFour = () => {
           <CustomLink
             href="/articles"
             title="Back to Articles"
-            className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light"
+            className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light dark:border-solid dark:border-light dark:border-2"
           />
         </Layout>
       </main>

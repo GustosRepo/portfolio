@@ -37,7 +37,7 @@ const articleThree = () => {
             text="HTML, CSS, JavaScript, and React for Beginners"
             className="mb-16"
           />
-          <article>
+          <article className="dark:text-light/75">
             <h1 className="text-3xl font-bold">Demystifying Web Development</h1>
             <h3 className="text-xl">
               In the digital age, the web has become an integral part of our
@@ -149,7 +149,7 @@ const articleThree = () => {
           <CustomLink
             href="/articles"
             title="Back to Articles"
-            className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light"
+            className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light dark:border-solid dark:border-light dark:border-2"
           />
         </Layout>
       </main>

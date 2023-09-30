@@ -41,15 +41,15 @@ const about = () => {
         <title>AH || About Page</title>
         <meta name="Portfolio" content="cv portfolio made with react/nextjs" />
       </Head>
-      <main className=" flex w-full flex-col items-center justify-center">
+      <main className="flex flex-col items-center justify-center w-full dark:text-light">
         <Layout className="pt-16">
           <AnimatedTexts
             text="Fueling Innovation with Passionate Tech Solutions"
             className="mb-16"
           />
-          <div className=" ml-8 mb-4 grid w-full grid-cols-8 gap-16">
-            <div className="col-span-3 flex flex-col items-start justify-center">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+          <div className="grid w-full grid-cols-8 gap-16 mb-4 ml-8 ">
+            <div className="flex flex-col items-start justify-center col-span-3">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 Biography
               </h2>
               <p className="font-medium">
@@ -59,7 +59,7 @@ const about = () => {
                 satellite operations has provided me with a unique perspective
                 on problem-solving and complex systems.
               </p>
-              <p className=" my-4 font-medium">
+              <p className="my-4 font-medium ">
                 My journey took an exciting turn when I discovered my passion
                 for coding. The world of development fascinated me, and I took
                 on the challenge of becoming a full stack developer. From
@@ -77,20 +77,20 @@ const about = () => {
                 make a meaningful impact.
               </p>
             </div>
-            <div className=" col-span-3 relative h-max rounded-[2rem] border-2 border-solid border-dark bg-light p-8 bottom-2 ">
-              <div className=" absolute top-0 -right-3 -z-10 w-[102%] h-[102%] rounded-[2rem] bg-dark " />
+            <div className=" col-span-3 relative h-max rounded-[2rem] border-2 border-solid border-dark bg-light p-8 bottom-2 dark:bg-dark dark:border-light ">
+              <div className=" absolute top-0 -right-3 -z-10 w-[102%] h-[102%] rounded-[2rem] bg-dark dark:bg-light" />
               <Image
                 src={aboutpic}
                 alt="AH"
                 className="w-full h-auto rounded-2xl "
               />
             </div>
-            <div className="col-span-2 flex flex-col items-start justify-between">
+            <div className="flex flex-col items-start justify-between col-span-2">
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block text-6xl font-bold">
                   <AnimatedNumbers value={50} />+
                 </span>
-                <h2 className="text-xl font-medium capatilze text-dark/75">
+                <h2 className="text-xl font-medium capatilze text-dark/75 dark:text-light/75">
                   Satified clients
                 </h2>
               </div>
@@ -99,7 +99,7 @@ const about = () => {
                   <AnimatedNumbers value={50} />
                   +
                 </span>
-                <h2 className="text-xl font-medium capatilze text-dark/75">
+                <h2 className="text-xl font-medium capatilze text-dark/75 dark:text-light/75">
                   Projects
                 </h2>
               </div>
@@ -107,7 +107,7 @@ const about = () => {
                 <span className="inline-block text-6xl font-bold">
                   <AnimatedNumbers value={4}/>+
                 </span>
-                <h2 className="text-xl font-medium capatilze text-dark/75">
+                <h2 className="text-xl font-medium capatilze text-dark/75 dark:text-light/75">
                   Years of SW experience
                 </h2>
               </div>

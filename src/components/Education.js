@@ -14,7 +14,7 @@ const Details = ({ type, time, information, place }) => {
         whileInView={{y:0}}
         transition={{duration:1, type:"spring", bounce:.5}}
         >
-        <h3 className="capitalize font-bold text-2xl">
+        <h3 className="text-2xl font-bold capitalize">
           {type}
         </h3>
         <span className="capitalize ">{place} <br></br>{time}</span>
@@ -34,14 +34,14 @@ const Education = () => {
     );
   return (
     <div className="my-64">
-      <h2 className=" font-bold text-8xl mb-32 w-full text-center">
+      <h2 className="w-full mb-32 font-bold text-center text-8xl">
         Education and Training
       </h2>
       <div ref={ref} className="w-[75%] mx-auto relative">
         <motion.div 
         style={{scaleY:scrollYProgress}}
-        className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"/>
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light/75"/>
+        <ul className="flex flex-col items-start justify-between w-full ml-4">
           <Details
             type="Associate of Applied Science in Space Systems Operations"
             time="2015"

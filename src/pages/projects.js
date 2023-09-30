@@ -12,7 +12,7 @@ const FramerImage = motion(Image);
 const FeaturedProject = ({ type, protitle, summary, img, link, github }) => {
   return (
     
-    <article className="relative flex items-center justify-center w-full p-12 border border-b-4 border-r-4 border-solid shadow-2xl rounded-3xl border-dark bg-light">
+    <article className="relative flex items-center justify-center w-full p-12 border border-b-4 border-r-4 border-solid shadow-2xl rounded-3xl border-dark bg-light dark:bg-dark dark:border-light dark:text-light">
 
       <Link
         href={link}
@@ -28,7 +28,7 @@ const FeaturedProject = ({ type, protitle, summary, img, link, github }) => {
         />
       </Link>
       <div className="flex flex-col items-start justify-between w-1/2 pl-6">
-        <span className="text-xl font-medium text-primary">{type}</span>
+        <span className="text-xl font-medium text-primary dark:text-primaryDark">{type}</span>
         <Link
           href={link}
           target="_blank"
@@ -46,7 +46,7 @@ const FeaturedProject = ({ type, protitle, summary, img, link, github }) => {
           <Link
             href={link}
             target="_blank"
-            className="p-2 px-6 ml-4 text-lg font-semibold rounded-lg bg-dark text-light"
+            className="p-2 px-6 ml-4 text-lg font-semibold border-transparent border-solid rounded-lg bg-dark text-light hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light hover:dark:border"
           >
             Visit Project
           </Link>
@@ -59,12 +59,12 @@ const FeaturedProject = ({ type, protitle, summary, img, link, github }) => {
 const Project = ({ type, protitle, summary, img, link, github }) => {
   return (
     <div>
-      <article className="relative flex flex-col items-center justify-center w-full p-6 py-10 border border-b-4 border-r-4 border-solid rounded-2xl border-dark bg-light">
+      <article className="relative flex flex-col items-center justify-center w-full p-6 py-10 border border-b-4 border-r-4 border-solid rounded-2xl border-dark bg-light dark:bg-dark dark:border-light dark:text-light">
         
         <Link
           href={link}
           target="_blank"
-          className="w-1/2 overflow-hidden rounded-lg cursor-pointer "
+          className="w-1/2 overflow-hidden rounded-lg cursor-pointer dark:bg-light dark:text-dark"
         >
           <FramerImage
             src={img}
@@ -75,7 +75,7 @@ const Project = ({ type, protitle, summary, img, link, github }) => {
           />
         </Link>
         <div className="flex flex-col items-start justify-between w-1/2 pl-6">
-          <span className="text-xl font-medium text-primary">{type}</span>
+          <span className="text-xl font-medium text-primary dark:text-primaryDark">{type}</span>
           <Link
             href={link}
             target="_blank"
@@ -93,7 +93,7 @@ const Project = ({ type, protitle, summary, img, link, github }) => {
             <Link
               href={link}
               target="_blank"
-              className="p-1 px-6 text-lg font-semibold rounded-lg bg-dark text-light"
+              className="p-1 px-6 text-lg font-semibold border-transparent rounded-lg bg-dark text-lightborder-solid hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light hover:dark:border"
             >
               Visit Project
             </Link>
